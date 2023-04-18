@@ -1,2 +1,2 @@
 # Qwallity_workshops
-Here are  my collection of homeworks and workshops.
+Here are  my collections of homeworks and workshops.
