@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "36b38150-1ee7-4084-89f1-64be5b334eae",
+		"name": "Hasmik's 2nd collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26485533"
+	},
+	"item": [
+		{
+			"name": "Post_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"zurabyanh@mail.ru\",\r\n\"name\":\"QA\",\r\n\"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"query\":\"QA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/magicsearch",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"magicsearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put_user ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"zurabyanh@mail.ru\",\r\n\"name\": \"QA\",\r\n\"tasks\": [{\r\n\"title\": \"test title\",\r\n\"description\": \"update\"\r\n},\r\n{\r\n\"title\": \"Вторая задача 2\",\r\n\"description\": \"Вторая задача 111\"\r\n}\r\n],\r\n\"companies\": [19, 20],\r\n\"hobby”:\"Настолки\",\r\n\"adres\":\"адрес io\",\r\n\"name1\":\"nam1\",\r\n\"surname1\":\"surname\",\r\n\"fathername1\":\"menik\",\r\n\"cat\":\"myau\",\r\n\"dog\":\"haf\",\r\n\"parrot\":\"rose\",\r\n\"cavy\":\"lyon?\",\r\n\"hamster\":\"hh\",\r\n\"squirrel\":\"jhg\",\r\n\"phone\":\"123\",\r\n\"inn\":\"123456789102\",\r\n\"gender\":\"f\",\r\n\"birthday\":\"01.01.1900\",\r\n\"date_start\":\"11.11.2000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuserwithtasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_avatar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/HP/Desktop/my photos/IMG_8757.JPG"
+						},
+						{
+							"key": "email",
+							"value": "zurabyanh@mail.ru",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addavatar?avatar&email",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addavatar"
+					],
+					"query": [
+						{
+							"key": "avatar",
+							"value": null
+						},
+						{
+							"key": "email",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_avatar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteavatar?email=zurabyanh@mail.ru",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "zurabyanh@mail.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dlete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteuser?delete=zurabyanh@mail.ru",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteuser"
+					],
+					"query": [
+						{
+							"key": "delete",
+							"value": "zurabyanh@mail.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
